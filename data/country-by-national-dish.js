@@ -1,3 +1,5 @@
+
+
 const natlFoods = [
 {"country" : "Afghanistan", "dish" : "Kabuli Palaw"},
 {"country" : "Albania", "dish" : "Tavë kosi"},
