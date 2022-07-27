@@ -1,0 +1,29 @@
+.country {
+    fill: #ccc;
+    stroke: #999;
+}
+
+
+* {
+    margin: 0;
+    padding: 1000;
+
+}
+
+
+
+body {
+    background-color: #BDDCFF;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+path:hover {
+    fill: rosybrown;
+}
+
+.dropdown{
+    display: flex;
+   
+}
