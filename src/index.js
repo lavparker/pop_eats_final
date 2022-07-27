@@ -49,8 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         for (let i = 0; i < natlFoods.length; i++) {
             let cty = natlFoods[i].country;
+            let food = natlFoods[i].dish;
 
-            console.log(cty);
+            console.log(cty, food);
         }
 
        
