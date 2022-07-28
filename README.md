@@ -25,7 +25,7 @@ This project will use the following technologies:
 
     * As the project grows, I’d like to explore additional libraries, APIs, etc. that would potentially make the page more engaging. A stretch goal is to alter the fill of each state in a way that allows the flag colors to appear in each country’s outline.
 
-##My timeline is as follows:
+## My timeline is as follows:
 
 * Friday/ Weekend:
 
