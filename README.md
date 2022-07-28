@@ -1,4 +1,4 @@
-# :knife_fork_plate: Pop Eats 
+# :plate_with_cutlery: Pop Eats 
 
 ## Background
 
@@ -14,10 +14,7 @@ In Pop_Eats, users will be able to:
 This project will also include: 
 * A production README file
 * A modal describing how the page should be used 
-
-## Wireframes
-
-##Technologies, Libraries, APIs
+## Technologies, Libraries, APIs
 
 This project will use the following technologies:
 * D3
@@ -44,6 +41,6 @@ This project will use the following technologies:
 
 ## Credit
 
-* (SVG Map:vhttps://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json)
+* (SVG Map: https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json)
 
 * (National Dish Data: https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-national-dish.json)
