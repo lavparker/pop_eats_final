@@ -1,9 +1,6 @@
-import natlFoods from "../data/country-by-national-dish";
+var national_foods = require('../data/country_food_data.json');
 
-console.log(natlFoods)
-console.log("webpack is working")
 
-// let countries;
 document.addEventListener("DOMContentLoaded", () => {
 
     const width = 900;
@@ -19,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //set up the path generator 
     const path = d3.geoPath(projection);
     //added changes on line 188 
-    let food = svg.append('g');
     const g = svg.append('g');
 
 
@@ -33,74 +29,34 @@ document.addEventListener("DOMContentLoaded", () => {
             .attr('class', 'country')
             .attr('d', path)
             .append('title')
-            .text(d => d.properties.name);
+            .text(d => `${d.id}: ${d.properties.name}`);
 
-            //trying to drill into 
-        // document.querySelector("object")
-        //     .contentDocument.querySelectorAll("path[path-id='3379']")[0].getAttribute("d")
+            svg.on("click", (d) => {
+                let selected_country = getCountryNameFromTarget(d.target)
 
-        // let map = _groups[0].forEach(ele =>{
-        //     let countriesss = ele.properties.name
-        //     console.log(countriesss);
-        // })
-        const worldMap = document.getElementsByClassName("")[0];
-        const countriesElement = g.selectAll('.country');
-        console.log(countriesElement);
-
-        for (let i = 0; i < natlFoods.length; i++) {
-            let cty = natlFoods[i].country;
-            let food = natlFoods[i].dish;
-
-            console.log(cty, food);
-        }
-
+                if (national_foods[selected_country]) {
+                    document.getElementById("food_displayer").innerHTML = "Last country selected: " + selected_country + ", favorite food: " + national_foods[selected_country].dish
+                }
+            })
        
     });
-    // added data on line 214-231
-    // nationalDishes =
-    //     d3.json('https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-national-dish.json').then(data =>{
-    //         food.selectAll('path')
-    //             .data(nationalDishes.features)
-    //             .enter()
-    //             .append('path')
-    //             .attr('fill', '#900')
-    //             .attr('stroke', '#999')
-    //             .attr('d', path);
-    //             .on('click', d => {
-    //                 if(d.properties.name === nationalDishes.country){
-    //                     d3.select('#label').text(nationalDishes.dish)
-    //             };
-    //             .on('mouseover', handleMouseOver)
-    //             .on('mouseout', handleMouseOut);
-    //             });
-
-    //     });
-
-
-
 })
 
+function getCountryNameFromTarget(target) {
+    if (!target) {
+        return ""
+    }
 
+    let element = target.querySelector("title")
 
-// usMap.addEventListener("mouseover", e => {
-//     const name = e.target.__data__.properties.NAME;
-//     const fullMessage = name.concat(": ", Number(currentYearDataset[name.concat(" : all fuels (utility-scale)")]).toLocaleString(), " gigawatthours (GWh)");
-//     const domEle = document.getElementById("hover-tooltip");
-//     domEle.innerHTML = fullMessage;
-//     domEle.style.opacity = 1;
-// });
+    if (!element) {
+        return ""
+    }
 
-//linking json data to svg map 
-// document.getElementById('');
-// const obj = JSON.parse(natlFood);
-// const newLocal = natlFood.forEach(el => {
-//     if (el.country === countries.geometries.properties.name);
-// });
+    let country_id_and_name = element.innerHTML
+    let split_index = country_id_and_name.indexOf(': ') + 2
 
+    let country_name = country_id_and_name.slice(split_index)
 
-// //click svg map
-// document.addEventListener('click', funcition()){
-//     if()
-// }
-
-// function clicked()
+    return country_name
+}
