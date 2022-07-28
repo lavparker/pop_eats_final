@@ -38,33 +38,63 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.getElementById("food_displayer").innerHTML = "Last country selected: " + selected_country + ", favorite food: " + national_foods[selected_country].dish
                 }
             })
-       
+     
     });
-    // Get the modal
 
+    //get modal element 
+    let modal = document.getElementById("simpleModal");
+    let modalBtn = document.getElementById("modalBtn")[0];
+    let closeBtn = document.getElementsByClassName('closeBtn');
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    modalBtn.addEventListener('click', openModal);
 
-    // When the user clicks on the button, open the modal
-    var modalBtn = document.getElementsByClassName("buttons")
-    modalBtn.onclick = function () {
-        // modal.style.display = "block";
+    closeBtn.addEventListener('click', closeModal);
+
+    window.addEventListener('click', outsideClick)
+
+    function openModal() {
         console.log(123);
+
+        modal.style.display = 'block';
     }
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
+    function closeModal() {
+        console.log(123);
+
+        modal.style.display = 'none';
     }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    function outsideClick(e){
+        if(e.target === modal){
+            modal.style.display = 'none';
         }
     }
-})
+
+//     // Get the modal
+
+
+//     // Get the <span> element that closes the modal
+//     var span = document.getElementsByClassName("close")[0];
+
+//     // When the user clicks on the button, open the modal
+//     var modalBtn = document.getElementsByClassName("buttons")
+//     modalBtn.onclick = function () {
+//         // modal.style.display = "block";
+//         console.log(123);
+//     }
+
+//     // When the user clicks on <span> (x), close the modal
+//     span.onclick = function () {
+//         modal.style.display = "none";
+//     }
+
+//     // When the user clicks anywhere outside of the modal, close it
+//     window.onclick = function (event) {
+//         if (event.target == modal) {
+//             modal.style.display = "none";
+//         }
+//     }
+// })
 
 function getCountryNameFromTarget(target) {
     if (!target) {

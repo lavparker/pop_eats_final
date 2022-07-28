@@ -1,0 +1,68 @@
+///////////////REMOVED FROM MAP.CSS//////////////
+/* added modal
+/* modal button */
+/* .buttons{
+    background: coral;
+    padding: 1em 2em;
+    color:aqua;  
+}
+
+.buttons:hover{
+    background: orangered;
+} */
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+///////////PULLED FROM INDEX.HTML//////////
+added modal < !-- Open The Modal --><button id="modalBtn" class="buttons">How to Use This Page</button>< !-- The Modal --><div id="simpleModal" class="modal">< !-- Modal content --><div class="modal-content"><span class="close">&times;
+</span><p>Welcome to Pop Eats !</p><br><p>How to Use:</p><br><p>Hover over over each country to see what the country is. If you already know where the country you are looking for is,
+click on the country and the country's national dish/favorite food will appear above the map!</p>
+ <br><p>Enjoy !</p></div></div>
