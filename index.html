@@ -7,6 +7,7 @@
     <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/doodle/2x/sun--v1.png" />
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/map.css">
+    <!-- <link rel="stylesheet" type="image/png" href="https://ibb.co/0ynp9N4"> -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script src="https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-national-dish.json"></script>
@@ -17,26 +18,35 @@
     <title>Pop Eats</title>
 </head>
 <body>
+
   <div>
     <div class="title">
         <h1>Pop Eats</h1>
     </div>
 
+    <!-- added water effect here -->
+    <div class="water"></div>
+ 
     <div class="social_media_links">
-        <p>by La Vinia Parker</p>
         <p>Socials:</p>
-            <a target="_blank" href="https://www.linkedin.com/in/la-vinia-parker-ab93885a">
-                <img src="./images/icons/linkedin.png" alt="linkedin social media logo" />
-            </a>
-            <a target="_blank" href="https://github.com/lavparker">
-                <img src="./images/icons/github.png" alt="github social media logo" />
-            </a>
+        <a target="_blank" href="https://www.linkedin.com/in/la-vinia-parker-ab93885a">
+            <img src="./images/icons/linkedin.png" alt="linkedin social media logo" />
+        </a>
+        <a target="_blank" href="https://github.com/lavparker">
+            <img src="./images/icons/github.png" alt="github social media logo" />
+        </a>
+
+        <div class="author">
+            <p>by La Vinia Parker</p>
+        </div>
+        
+        
     </div>
 
     <div class="country_info_display">
-        <p id="food_displayer">no food selected</p>
+        <p id="food_displayer">Select a Country!</p>
     </div>
-
+    </filter>
 </div>
 
     

@@ -3,29 +3,50 @@
     padding: 1000;
 
 }
+.country_info_display {
+    margin: 10px;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+    
+
+}
 
 body {
     /* padding-top: 15%; */
-    background-color: #BDDCFF;
+    background-color: #0a315c;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:fantasy;
     font-style: italic;
+    color: rgb(173, 118, 35);
+    font-size: large;
+    font-weight: 300;
 }
 
 path:hover {
     fill: rosybrown;
 }
 
-.dropdown{
+/* .dropdown{
     display: flex;
    
-} 
+}  */
 
  h1 {
      padding-top: 5%;
+     margin: 0;
+     text-align: center;
+     font-size: 6em;
+     font-family: fantasy;
+     position: center;
+     z-index: 1;
+     font-weight: bold;
+     color: rgb(80, 184, 177);
  }
 
+
+
  .country {
-     fill: #ccc;
-     stroke: #999;
+     fill: rgb(23, 116, 45);
+     stroke: rgb(7, 70, 55);
  }
